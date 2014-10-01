@@ -15,7 +15,7 @@ public class Main {
         inputCommands = FileReader.getCommandList(path);
         
         for (InputCommand print : inputCommands) {
-            System.out.println("Command:" + print.getCommand() + "  Path:" + print.getPath() + "   Catalog: " + print.getCatalog());
+            System.out.println("Command:" + print.getCommand() + "  Path:" + print.getPath() + "   Catalog: " + print.getCatalog() + "  File name: " + Logic.getFileName(print));
         }
         
     }
