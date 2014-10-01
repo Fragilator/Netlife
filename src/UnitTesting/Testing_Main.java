@@ -13,6 +13,7 @@ public class Testing_Main {
         System.out.println("Test 1: " + test1);
         boolean test2 = Units.CheckisCatalog(path);
         System.out.println("Test 2: " + test2);
-        
+        boolean test3 = Units.CheckGetFileName();
+        System.out.println("Test 3: " + test3);
     }
 }
