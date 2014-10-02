@@ -9,9 +9,19 @@ import netlife.datamodels.InputCommand;
  */
 public class Logic {
     
-    public static ArrayList<InputCommand> getCommandList(String filePath){
+    // Converts the ADD and DEL commands to ADD, DEL and MOVE
+    public static ArrayList<InputCommand> formatCommandList(ArrayList<InputCommand> list){
         ArrayList<InputCommand> commands = new ArrayList<>();
-      
+        String name;
+        
+        for(int i=0;i<list.size();i++){
+            InputCommand one = list.get(i);
+            for(int j=i+1;j<list.size();j++){
+                InputCommand two = list.get(j);
+                System.out.println("one: " + one.getPath());
+                System.out.println("Two: " + two.getPath());
+            }
+        }
         
         
         
