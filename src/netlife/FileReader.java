@@ -31,7 +31,7 @@ public class FileReader {
                     command = sc.next();
                     path = sc.next();
                     sc.close();
-                    commands.add(new InputCommand(command, path));
+                    commands.add(new InputCommand(command, path, ""));
                     line = b.readLine();        
                 }
             }catch(Exception e){

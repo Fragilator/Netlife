@@ -1,7 +1,6 @@
 package UnitTesting;
 
 /**
- *
  * Unit testing main class
  */
 public class Testing_Main {
