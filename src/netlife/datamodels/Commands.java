@@ -3,14 +3,13 @@ package netlife.datamodels;
 /**
  * Class that holds the objects from input
  */
-public final class InputCommand {
+public final class Commands {
     String command;
     String path;
     String movePath;
     boolean catalog;
     
-    
-    public InputCommand(String command, String path, String movePath){
+    public Commands(String command, String path, String movePath){
         this.command = command;
         this.path = path;
         this.movePath = movePath;
@@ -43,7 +42,4 @@ public final class InputCommand {
         catalog = path.substring(path.length() - 1).equals("/");
         return catalog;
     }
-    
-    
-    
 }
