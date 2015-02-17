@@ -2,6 +2,7 @@ package UnitTesting;
 
 import java.util.ArrayList;
 import netlife.FileReader;
+import netlife.Logic;
 import static netlife.Logic.getFileName;
 import netlife.datamodels.Commands;
 
@@ -47,8 +48,20 @@ public class Units {
        String test2 = getFileName(com2);
        
        boolean check = test.equals("1.jpg");
-       boolean check2 = test.equals("1.jpg");
+       boolean check2 = test2.equals("1.jpg");
        return (check && check2) == true;
        }
+    
+   // Checks the method isMove from the Logic class
+   public static boolean CheckIsMove(){
+       Commands com = new Commands("ADD", "bilder/2012/1.jpg", "");
+       Commands com2 = new Commands("DEL", "bilder/2012/1.jpg", "");
+       Commands com3 = new Commands("ADD", "bilder/2012/2.jpg", "");
+       Commands com4 = new Commands("ADD", "bilder/2012/2.jpg", "");
+       
+       boolean check = Logic.isMove(com, com2);
+       boolean check2 = Logic.isMove(com3, com4);
+       
+       return check == true && check2 == false;
    }
-
+}

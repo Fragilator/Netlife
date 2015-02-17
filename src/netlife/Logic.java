@@ -36,7 +36,7 @@ public class Logic {
             if(check == false){
                 for(Commands kake : listCheck){
                     if(getFileName(one).equals(getFileName(kake)) ){
-                        if (getFileName(one).equals(getMoveFileName(kake))) {
+                        if (getFileName(one).equals(getFileName(kake))) {
                             check2 = true;
                             break;
                         }
@@ -55,18 +55,13 @@ public class Logic {
         String fileName = new File(obj.getPath()).getName();
      return fileName;
     }
-     //Finds the filename of movePath of the Commands object
-     public static String getMoveFileName(Commands obj){
-        String fileName = new File(obj.getPath()).getName();
-     return fileName;
-    }
     
      // Finds matching ADD and DEL commands and replaces them with one MOVE command
      public static boolean isMove(Commands one, Commands two){ 
         boolean path = getFileName(one).equals(getFileName(two));
         boolean cata = one.getCatalog() == two.getCatalog();
         //Null check and makes sure that the commands are opposite
-        boolean comm = (one.getCommand() == null ? two.getCommand() != null : !one.getCommand().equals(two.getCommand())); 
+        boolean comm = !(((one.getCommand() == null) || (two.getCommand() == null)) || one.getCommand().equals(two.getCommand())) ; 
      return path && cata && comm;
      }
      
